@@ -17,3 +17,15 @@ services:
     environment:
      - NODE_ENV=production
 ```
+
+10.241.185.69 rancher.priot.tech
+10.241.185.40 rancher.priot.tech
+
+10.50.1.206 rancher-test.sme.prefeitura.sp.gov.br
+10.50.1.211 rancher-test.sme.prefeitura.sp.gov.br
+
+10.49.16.241 patiodigital.prefeitura.sp.gov.br
+10.49.16.241 intranet.sme.prefeitura.sp.gov.br
+
+186.239.235.118 xo.sme.prefeitura.sp.gov.br
+186.239.235.118 rundeck.sme.prefeitura.sp.gov.br
