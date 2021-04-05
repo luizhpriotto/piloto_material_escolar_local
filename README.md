@@ -18,16 +18,4 @@ services:
      - NODE_ENV=production
 ```
 
-```
-10.241.185.69 rancher.priot.tech
-10.241.185.40 rancher.priot.tech
-
-10.50.1.206 rancher-test.sme.prefeitura.sp.gov.br
-10.50.1.211 rancher-test.sme.prefeitura.sp.gov.br
-
-10.49.16.241 patiodigital.prefeitura.sp.gov.br
-10.49.16.241 intranet.sme.prefeitura.sp.gov.br
-
-186.239.235.118 xo.sme.prefeitura.sp.gov.br
-186.239.235.118 rundeck.sme.prefeitura.sp.gov.br
-```
+MTAuMjQxLjE4NS42OSByYW5jaGVyLnByaW90LnRlY2gKMTAuMjQxLjE4NS40MCByYW5jaGVyLnByaW90LnRlY2gKCjEwLjUwLjEuMjA2IHJhbmNoZXItdGVzdC5zbWUucHJlZmVpdHVyYS5zcC5nb3YuYnIKMTAuNTAuMS4yMTEgcmFuY2hlci10ZXN0LnNtZS5wcmVmZWl0dXJhLnNwLmdvdi5icgoKMTAuNDkuMTYuMjQxIHBhdGlvZGlnaXRhbC5wcmVmZWl0dXJhLnNwLmdvdi5icgoxMC40OS4xNi4yNDEgaW50cmFuZXQuc21lLnByZWZlaXR1cmEuc3AuZ292LmJyCgoxODYuMjM5LjIzNS4xMTggeG8uc21lLnByZWZlaXR1cmEuc3AuZ292LmJyCjE4Ni4yMzkuMjM1LjExOCBydW5kZWNrLnNtZS5wcmVmZWl0dXJhLnNwLmdvdi5icg==
