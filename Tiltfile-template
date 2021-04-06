@@ -12,7 +12,7 @@ custom_build(
   '.',
 
   #Fixind a tag, because Tilt generate a dynamic tag
-  tag = 'tilt-{tag}',
+  tag = '${tag}',
 
   #live updte for hot reload
   live_update = [

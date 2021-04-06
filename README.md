@@ -1,21 +1,61 @@
-# Criar pastas data e storage
+[![Build Status](http://jenkins.sme.prefeitura.sp.gov.br/buildStatus/icon?job=PortalMaterialEscolar-BackEnd%2Fmaster)](http://jenkins.sme.prefeitura.sp.gov.br/view/Portal_Material_Escolar/job/PortalMaterialEscolar-BackEnd/job/master/)
+# SME-PortalMaterialEscolar-BackEnd-BackEnd
+========
+
+Portal do programa de captação de fornecedores de material escolar da Secretaria de Educação da cidade de São Paulo.
+
+License: MIT
+
+Versão: 0.1.0
 
 
-https://github.com/prefeiturasp/PortalMaterialEscolar-BackEnd
+## Release Notes
 
 
-Li9vcGVuY29ubmVjdCAtLXByb3RvY29sPWdwIDE4Ni4yMzkuMjM1Ljk6NDQz
+### Para desenvolver
 
+1.  Clone o repositório.
+2.  Crie um Virtualenv com Python 3.6
+3.  Ative o Virtualenv.
+4.  Instale as dependências.
+5.  Configure a instância com o .env
+6.  Execute os testes.
+7.  Faça um Pull Request com o seu desenvolvimento
 
+```console
+git clone https://github.com/prefeiturasp/PortalMaterialEscolar-BackEnd.git back
+cd back
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements\local.txt
+cp env_sample .env
+pytest
 ```
-version: '3'
-services:
-  api:
-    image: 'node:6-alpine'
-    env_file:
-     - .env
-    environment:
-     - NODE_ENV=production
+
+### Tema do Admin
+Para instalar o tema do Admin
+
+```console
+python manage.py loaddata admin_interface_theme_uswds.json
 ```
 
-MTAuMjQxLjE4NS42OSByYW5jaGVyLnByaW90LnRlY2gKMTAuMjQxLjE4NS40MCByYW5jaGVyLnByaW90LnRlY2gKCjEwLjUwLjEuMjA2IHJhbmNoZXItdGVzdC5zbWUucHJlZmVpdHVyYS5zcC5nb3YuYnIKMTAuNTAuMS4yMTEgcmFuY2hlci10ZXN0LnNtZS5wcmVmZWl0dXJhLnNwLmdvdi5icgoKMTAuNDkuMTYuMjQxIHBhdGlvZGlnaXRhbC5wcmVmZWl0dXJhLnNwLmdvdi5icgoxMC40OS4xNi4yNDEgaW50cmFuZXQuc21lLnByZWZlaXR1cmEuc3AuZ292LmJyCgoxODYuMjM5LjIzNS4xMTggeG8uc21lLnByZWZlaXR1cmEuc3AuZ292LmJyCjE4Ni4yMzkuMjM1LjExOCBydW5kZWNrLnNtZS5wcmVmZWl0dXJhLnNwLmdvdi5icg==
+### Filas Celery
+**Subir o Celery Worker**
+```console
+celery  -A config worker --loglevel=info
+```
+
+**Subir o Celery Beat**
+```console
+celery  -A config beat --loglevel=info
+```
+
+**Monitorar os processos no celery**
+```console
+flower -A config --port=5555
+```
+
+**Limpar os processos no celery**
+```console
+celery  -A config purge
+```
